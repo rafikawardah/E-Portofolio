@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kalkulator</title>
+    <style type="text/css">
+      button {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 20px;
+        padding: 5;
+      }
+      #result {
+        text-align: right;
+        font-size: 50px;
+        font-weight: bold;
+      }
+      #prev {
+        text-align: right;
+        padding: 5px 5px 8px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- col 4 baris 5 -->
+    <table border="1" cellspacing="0">
+      <tr>
+        <td colspan="4">
+          <div id="prev">&nbsp</div>
+          <div id="result">0</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="javascript:display(7);">7</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:display(8);">8</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:display(9);">9</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:display();">x</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="javascript:display(4);">4</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:display(5);">5</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:display(6);">6</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:setOperator();">-</button>
+        </td>
+      </tr>
+      <tr>
+        <td><button type="button">1</button></td>
+        <td>
+          <button type="button" onclick="javascript:display(2);">2</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:display(3);">3</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:setOperator('+');">
+            +
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="javascript:clearInput();">c</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:display(0);">0</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:backspace();">----</button>
+        </td>
+        <td>
+          <button type="button" onclick="javascript:setOperator();">=</button>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript">
+      var result = document.getElementById("result");
+      function display(angka) {
+        if (result.textContent == "0") result.textContent = angka;
+        else result.textContent += angka;
+      }
+
+      function clearInput() {
+        result.textContent = "0";
+      }
+
+      function backspace() {
+        if (result.textContent.length == 1) result.textContent = "0";
+        else
+          result.textContent = result.textContent.substring(
+            0,
+            result.textContent.length - 1
+          );
+      }
+      var tanda = "";
+      var last = "";
+      function setOperator(operator) {
+        last = result.textContent;
+        result.textContent = "0";
+
+        tanda = operator;
+        prev.textContent = last + "" + tanda;
+
+        if (tanda === "+") parseInt((last.textContent += "+"));
+        if (tanda === "=") last.textContent;
+      }
+    </script>
+  </body>
+</html>
