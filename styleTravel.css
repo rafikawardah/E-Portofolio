@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --main-color: #1f4590;
+  --second-color: #ffa451;
+  --body-color: #a1d1dd;
+
+  --main-font: "Open Sans", sans-serif;
+  --heading-font: "Raleway", sans-serif;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: var(--main-font);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+section {
+  margin-top: 200px;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.navbar {
+  background-color: antiquewhite;
+}
+
+.navbar .nav-wrapper {
+  background-color: aqua;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .nav-wrapper .logo {
+  font-size: 2.8rem;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.navbar .nav-wrapper .logo span {
+  font-size: 1.875rem;
+  color: var(--second-color);
+}
+
+.navbar .nav-wrapper .menu-wrapper {
+  display: flex;
+}
+
+.navbar .nav-wrapper .menu-wrapper .menu {
+  display: flex;
+}

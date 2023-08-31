@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+  </head>
+  <body>
+    <input type="number" id="angka1" placeholder="Masukkan angka 1: " />
+    <input type="number" id="angka2" placeholder="Masukkan angka 2: " />
+    <button type="button" onclick="javascript:panggil()">Panggil</button>
+    <button type="button" onclick="javascript:hitung()">Hitung</button>
+    <script type="text/javascript">
+      var angka = 5;
+      console.log("Hello World");
+      console.log("Angka =" + angka);
+      function panggil() {
+        var a = document.getElementById("nama");
+        alert(a.value);
+      }
+      function hitung() {
+        var angka1 = document.getElementById("angka1").value;
+        var angka2 = document.getElementById("angka2").value;
+        alert(parseInt(angka1) + parseInt(angka2));
+      }
+    </script>
+  </body>
+</html>
